@@ -1,0 +1,30 @@
+.Footer {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+}
+
+.Footer > div {
+  width: 100%;
+}
+
+.Footer .Copyright {
+  font-size: 0.8rem;
+  color: #838383;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+  .Footer {
+    position: relative;
+    left: 0;
+    padding: 10px;
+    height: 2.6rem;
+    background: var(--accent-color);
+  }
+
+  .Footer .Copyright {
+    font-size: 0.7rem;
+    color: white;
+    text-align: center;
+  }
+}

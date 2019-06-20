@@ -1,0 +1,97 @@
+.Fleets {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.Fleets nav {
+  width: 250px;
+}
+
+.Fleets > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Fleets h1 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.Fleets ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Fleets a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.Fleets a:hover,
+.Fleets a:active,
+.Fleets a.active {
+  color: var(--accent-color);
+}
+
+button {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+
+.Left {
+  margin-right: 2rem;
+}
+
+.Right {
+  margin-left: 2rem;
+}
+
+.Slider {
+  position: relative;
+  width: 340px;
+  height: 320px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.Slider:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.SliderWrapper {
+  display: flex;
+  position: absolute;
+  transition: transform 250ms ease-in;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+  .Fleets {
+    flex-direction: column;
+  }
+  .Left {
+    margin-right: 0;
+  }
+
+  .Right {
+    margin-left: 0;
+  }
+
+  .Fleets nav {
+    padding-bottom: 2rem;
+  }
+
+  .Slider {
+    width: 300px;
+    height: 320px;
+    margin-bottom: 3rem;
+  }
+}

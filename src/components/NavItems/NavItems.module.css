@@ -1,0 +1,75 @@
+.NavItems {
+  width: 100%;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.NavItems ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.NavItems li {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.NavItems li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.NavItems li a:hover,
+.NavItems li a:active,
+.NavItems li a.active {
+  color: var(--accent-color);
+}
+
+.NavItems ul li nav {
+  background: white;
+  position: absolute;
+  top: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  width: 200%;
+  transition: transform 150ms ease-in-out;
+}
+
+.NavItems ul li nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.NavItems nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.NavItems ul li nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.NavItems ul li nav ul li {
+  padding: 0 1rem;
+}
+
+.NavItems ul li:hover > nav {
+  transform: scale(1, 1);
+}
+
+.NavItems ul li:hover > nav ul {
+  transform: translateY(0);
+  transition: transform 150ms ease-in-out 100ms;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+  .NavItems {
+    display: none;
+  }
+}

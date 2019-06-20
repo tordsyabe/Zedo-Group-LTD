@@ -1,0 +1,79 @@
+.Fleet {
+  flex: 1;
+  width: 340px;
+}
+
+.FleetCard {
+  transition: 0.3s;
+  width: 100%;
+}
+
+.FleetCard label {
+  cursor: pointer;
+}
+
+.FleetCard img {
+  width: 100%;
+  height: 250px;
+  cursor: pointer;
+}
+
+.FleetCard p {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.Details {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.Details h5 {
+  margin: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Details i {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.FleetSpecification {
+  transform: scale(1, 0);
+  transform-origin: bottom;
+  position: absolute;
+  top: 0;
+  width: 340px;
+  height: 100%;
+  transition: transform 250ms ease-in-out;
+  cursor: pointer;
+  padding: 1rem;
+  background: white;
+}
+
+.FleetLabelToggle {
+  display: none;
+}
+
+.FleetSpecification p {
+  margin: 0;
+}
+
+.FleetLabelToggle:checked + .FleetSpecification {
+  transform: scale(1, 1);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+  .FleetCard {
+    transition: 0.3s;
+    width: 300px;
+  }
+
+  .FleetSpecification {
+    width: 300px;
+  }
+}
